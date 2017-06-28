@@ -102,6 +102,11 @@ class Slider_model extends CI_Model{
     }
 
 
+	public function elimina_slide($id) {
+		$this->db->delete('slider', array('id' => $id));
+    }
+
+
 	public function activa_slide($id) {
 		$data = array(
             'activo' => 1,
