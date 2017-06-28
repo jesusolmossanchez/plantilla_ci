@@ -138,7 +138,11 @@ class Slider_admin extends CI_Controller{
 
 
 
+	
+
 	public function borrar($id){
+		$this->Slider_model->elimina_slide($id);
+		redirect(base_url('admin/slider'));
 	}
 
 
