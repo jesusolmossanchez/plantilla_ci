@@ -1,0 +1,290 @@
+/* Global  */
+
+.navbar-left {
+    display: none;
+}
+
+/*Footer*/
+.footer{
+    display:none;
+}
+
+
+/* Login */
+#logo_admin{
+    position: absolute;
+    width: 300px;
+    height: auto;
+    left: calc(50% - 150px);
+    top: 12%;
+}
+
+.login-form {
+	background-color: #FFFFFF;
+	position: absolute;
+	width: 380px;
+	height: 240px;
+	left: 50%;
+	top: 50%;
+	margin: -70px 190px 120px -190px;
+	border: 1px solid #CACACA;
+	font-family:"Roboto","Helvetica Neue",Arial,sans-serif;
+}
+
+.login-form > h2 {
+	margin: 0px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.login-form form > fieldset { 
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 30px;
+}
+
+.login-form label {
+	width: 40%;
+	font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.login-form input.button {
+    background-color: #d5d5d5;
+    border: 0 none;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 5px 40px;
+    text-transform: uppercase;
+}
+
+body.login {
+	background-color: #f2f2f2;
+}
+
+body.login footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+
+
+/* Navbar Search */
+
+#li-form-search {}
+
+#li-form-search > i {
+    float: left;
+    margin: 16px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#search_form {
+    float: left;
+    margin-top: 10px;
+}
+
+#search_form_input {}
+
+#search_form_input > input {
+    padding: 2px;
+    height: 26px;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
+/* Page Search */
+
+.busqueda_estado {
+	font-weight: 600;
+}
+
+.busqueda_estado.pendiente {
+	color: #666666;
+}
+
+.busqueda_estado.validado {
+	color: green;
+}
+
+.busqueda_estado.rechazado {
+	color: red;
+}
+
+/* Encabezados de Listados */
+
+.card-table > .header {
+	padding-left: 0px;
+	padding-bottom: 20px;
+}
+
+.card-table > .header > h4{
+	font-size: 28px;
+}
+
+
+/* MODALS */
+
+.modal_form {}
+
+.modal_form fieldset{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.modal_form fieldset > label {
+    color: #5b94c5;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.modal_form fieldset > p {
+  font-size: 13px;
+}
+
+.modal_form fieldset > input {
+  font-size: 16px;
+  min-width: 360px;
+  padding: 4px;
+}
+ 
+
+/* Libros */
+.dataTable td{
+    vertical-align: middle!important;
+}
+.thum_entidad{
+    height: 100px;
+    width: auto;
+}
+.desactiva_table{
+    font-size: 30px;
+    color: #369836;
+    cursor: pointer;
+}
+.activa_table{
+    font-size: 30px;
+    color: #ff0000;
+    cursor: pointer;
+
+}
+.editar_table{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Editar libros */
+.label_img{
+    float: left;
+    width: 100%;
+    font-size: 11px!important;
+}
+.contiene_img_form{
+    float: left;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.contiene_img_form div{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.contiene_img_form:hover > div {
+    opacity: 0.3;
+    text-decoration: none!important; 
+    border: none!important; 
+}
+.contiene_img_form:hover > span {
+    display: block;
+}
+
+.hover_text {
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: none;
+}
+
+.hover_text img{
+    width: 50px;
+}
+
+.hover_text span{
+    display: block;
+}
+
+
+/* SORT */
+.sort_table{
+    width: 20px;
+    height: auto;
+}
+
+.sortable_row{
+    cursor: ns-resize;
+}
+
+.ui-sortable-placeholder  {
+    display: block;
+    height: 220px;
+    margin-right: 15px;
+    max-width: 220px;
+    min-width: 220px;
+}
+
+/** COLOR PICKER **/
+.colorpicker.colorpicker-visible {
+    display: block;
+    visibility: visible;
+    z-index: 99999999;
+    opacity: 1;
+}
+
+.card label {
+    font-size: 15px !important;
+    margin-bottom: 5px;
+    text-transform: none;
+    color: #000;
+}
+
+.card label span{
+    font-size: 13px !important;
+    text-transform: none;
+    color: #797979;
+    font-style: italic;
+}
+
+.separator{
+    margin-bottom: 40px; 
+    border-bottom: 1px solid #dedede;
+}
