@@ -25,11 +25,11 @@ if [ "$version_antigua_texto" != "$ultimo_commit" ]
     echo $version
 
     cd www
-    gulp deploy-css
+    gulp styles-deploy
     cd ..
     git add www/version.php
-    git add www/assets/dist-css/styles-build.min.css
-    git add www/assets/scss/_version.scss
+    git add www/assets/app/css/styles.css
+    git add www/assets/app/scss/_version.scss
     git commit -m"version $version" -n
 
 fi
