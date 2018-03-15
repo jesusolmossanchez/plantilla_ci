@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  maquina_db:
+      build: ./mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+      ports: 
+        - 3306:3306
+  maquina_php:
+    build: ./php
+    ports:
+      - '3000:80'
+    volumes:
+       - ./logs/apache2:/var/log/apache2
+       - ./www:/var/www/html
+    depends_on:
+      - maquina_db
+  maquina_pma:
+    depends_on:
+      - maquina_db
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8081:80'
+    volumes:
+      - ./phpmyadmin/sessions:/sessions

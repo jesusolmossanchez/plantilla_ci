@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ultimo_commit=`git log --oneline -1 --pretty=%B`
+ejecutable_php=`which php`
+
+version_antigua=`$ejecutable_php www/incrementa_version.php`
+version_antigua_texto="version $version_antigua"
+
+
+echo $version_antigua_texto
+echo $ultimo_commit
+
+if [ "$version_antigua_texto" != "$ultimo_commit" ]
+    then
+
+    echo "..."
+    echo "generando version automatica"
+
+
+    branch=`git rev-parse --abbrev-ref HEAD`
+
+    version=`$ejecutable_php www/incrementa_version.php $branch`
+
+    echo "la version es..."
+    echo $version
+
+    cd www
+    gulp deploy-css
+    cd ..
+    git add www/version.php
+    git add www/assets/dist-css/styles-build.min.css
+    git add www/assets/scss/_version.scss
+    git commit -m"version $version" -n
+
+fi
