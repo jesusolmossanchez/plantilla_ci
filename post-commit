@@ -29,6 +29,7 @@ if [ "$version_antigua_texto" != "$ultimo_commit" ]
     cd ..
     git add www/version.php
     git add www/assets/app/css/styles.css
+    git add www/assets/app/css/styles_dev.css
     git add www/assets/app/scss/_version.scss
     git commit -m"version $version" -n
 
